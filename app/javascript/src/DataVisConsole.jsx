@@ -2,7 +2,6 @@ import React from 'react';
 
 import SubmissionBarChart from './data/SubmissionBarChart'
 import SiteBarChart from './data/SiteBarChart'
-import TagPieChart from './data/TagPieChart'
 
 export default class DataVis extends React.Component {
   constructor(props){
@@ -60,18 +59,7 @@ export default class DataVis extends React.Component {
           
           <SiteBarChart submissionData={siteData} color={"#E7ECEF"} dataName={"Submissions per site"}/>
 
-{/* <TagPieChart data={siteData} /> */}
           <hr className="w-60 ml0 mt0"></hr>
-
-          <h2 className="mb4 f1 title mb2">Most used tags</h2>
-          
-          <TagPieChart data={tagDataMost} />
-
-          <hr className="w-60 ml0 mt0"></hr>
-
-          <h2 className="mb4 f1 title mb2">Least used tags</h2>
-          
-          <TagPieChart data={tagDataLeast} />
           
         </div>
 
