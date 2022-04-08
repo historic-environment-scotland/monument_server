@@ -1,6 +1,7 @@
 import React from 'react';
-import Logo from 'images/logo-2019-inverted.png'
-import SquareLogo from 'images/main-logo-black-squished.jpg'
+import Logo from 'images/hes-logo-white2.png'
+// import Logo from 'images/logo-2019-inverted.png'
+import SquareLogo from 'images/hes-small.png'
 
 import Form from './Form.jsx'
 import Login from './Login.jsx'
@@ -25,14 +26,14 @@ export default class Nav extends React.Component {
     const {collapsed} = this.state
     return (
       <nav className={collapsed ? "collapsed" : "full"}>
-        <img src={collapsed ? SquareLogo : Logo} onClick={this.toggleNav} className="pointer"/>
+        <img src={collapsed ? SquareLogo : Logo} onClick={this.toggleNav} className="pointer w-50 flex center pa3"/>
         {collapsed ? (
           // collapsed nav
               <div className="nav-content"></div>
         ) : (
           // normal nav
           <div className="nav-content">
-            <div className="mb5">
+            <div className="mb3 mt2">
               <button 
                 className={this.props.viewDataVis ? "w-50 br--left active-button" : "w-50 br--left"} 
                 onClick={this.props.handleToggle}>Data</button>
