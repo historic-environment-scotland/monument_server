@@ -42,7 +42,7 @@ class Admin::DropUploadController < ApplicationController
         message = "Image upload unsucessful: #{@registration.errors.messages}"
       end
     rescue
-      message = "whoops, something has gone wrong"
+      message = "whoops, something has gone wrong : #{@registration.errors.messages}"
     end
 
     message
